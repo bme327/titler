@@ -9,6 +9,8 @@ Rendering is done in Python. Pillow draws each frame and the frames are piped in
 ffmpeg, which `imageio-ffmpeg` installs for you. No browser is involved, so frame timing
 is exact and nothing else needs to be installed.
 
+![Intro animation](docs/media/01_intro.gif)
+
 ## Install & run
 
 ```powershell
