@@ -1,0 +1,118 @@
+# Render with:  python -m titler examples/titles.yaml
+# Lengths: plain number or "120px" = pixels, "36pt" = points (dpi/72 px), "50%" = of frame width/height.
+
+output_dir: out/demo_titles      # relative to this file
+themes: themes.yaml              # extra theme file(s); built-ins (terminator, amber, clean) are always available
+theme: terminator                # default theme for slides that don't set one
+
+video:
+  width: 1920
+  height: 1080
+  fps: 30
+  dpi: 96
+
+slides:
+  - name: intro
+    duration: 10
+    texts:
+      - text: "ENERGY TWIN ..."
+        x: 8%
+        y: 20%
+        size: 64pt
+      - text: |
+          > Lakehouse       .......... ONLINE
+          > Eventhouse      .......... ONLINE
+          > Knwledge graph  .......... ONLINE
+          > OPCUA           .......... ONLINE
+          > UKMET Weather   .......... ONLINE
+          > Aurora Weather  .......... ONLINE
+          > Hydro intelligence ....... ONLINE
+          > ..........................
+          > All systems ONLINE
+        x: 8%
+        y: 45%
+        size: 28pt
+        speed: 85
+
+  - name: telemetry
+    theme: skynet-hud            # defined in themes.yaml (background image + overlays)
+    duration: 5
+    texts:
+      - text: "Telemetry"
+        x: 50%
+        y: 40%
+        anchor: center
+        size: 72pt
+      - text: "OPC UA, MQTT, Kafka, ETL"
+        x: 50%
+        y: 58%
+        anchor: center
+        size: 36pt
+        speed: 35
+
+  - name: hydro-intelligence
+    theme: skynet-hud            # defined in themes.yaml (background image + overlays)
+    duration: 5
+    texts:
+      - text: "Hydro Intelligence"
+        x: 50%
+        y: 40%
+        anchor: center
+        size: 72pt
+      - text: "AI + Knowledge graph"
+        x: 50%
+        y: 58%
+        anchor: center
+        size: 36pt
+        speed: 35
+
+  - name: work-orders
+    theme: skynet-hud            # defined in themes.yaml (background image + overlays)
+    duration: 5
+    texts:
+      - text: "Work Orders"
+        x: 50%
+        y: 40%
+        anchor: center
+        size: 72pt
+      - text: "Maintenance, Spare Parts, Inspection"
+        x: 50%
+        y: 58%
+        anchor: center
+        size: 36pt
+        speed: 35
+
+  - name: weather
+    theme: skynet-hud            # defined in themes.yaml (background image + overlays)
+    duration: 5
+    texts:
+      - text: "Weather"
+        x: 50%
+        y: 40%
+        anchor: center
+        size: 72pt
+      - text: "Forecast, Alerts, Analysis, Area rainfalls"
+        x: 50%
+        y: 58%
+        anchor: center
+        size: 36pt
+        speed: 35
+
+  - name: outro
+    duration: 10
+    texts:
+      - text: "ENERGY TWIN ..."
+        x: 8%
+        y: 20%
+        size: 64pt
+      - text: |
+          > Streaming              .......... ONLINE
+          > Batch ETL              .......... ONLINE
+          > Production deployment  .......... ONLINE
+          > Hydro intelligence     .......... WARMED
+          > ........................................
+          > PRODUCTION READY ...
+        x: 8%
+        y: 45%
+        size: 28pt
+        speed: 85

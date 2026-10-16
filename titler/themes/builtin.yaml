@@ -1,0 +1,60 @@
+# Built-in themes. Any key valid on a slide (except texts/name) may appear here.
+# User theme files (referenced via `themes:` in a project) can override or extend these.
+
+terminator:
+  description: Glowing green CRT computer text with scanlines, vignette and flicker.
+  fade_in: 0.3
+  fade_out: 0.5
+  hold: 2.5
+  background:
+    color: "#010802"
+  text:
+    font: [consola.ttf, Consolas, DejaVuSansMono.ttf, "Courier New", cour.ttf, Menlo.ttc,
+           LiberationMono-Regular.ttf]
+    size: 40pt
+    color: "#b6ffc8"          # bright core of the phosphor
+    speed: 14
+    jitter: 0.6
+    pause: 0.6
+    line_pause: 0.25
+    glow:
+      color: "#00ff41"
+      radius: 9
+      strength: 2.4
+    cursor:
+      style: block
+      color: "#5dff83"
+      blink_interval: 0.5
+  effects:
+    scanlines:
+      spacing: 4
+      thickness: 2
+      opacity: 0.28
+    vignette: 0.6
+    flicker: 0.06
+
+# Same look in amber; demonstrates `extends`.
+amber:
+  extends: terminator
+  description: Amber monochrome terminal.
+  background:
+    color: "#0a0500"
+  text:
+    color: "#ffe0a8"
+    glow:
+      color: "#ff9d00"
+    cursor:
+      color: "#ffb340"
+
+clean:
+  description: Plain white text on dark grey, no effects.
+  fade_in: 0.4
+  fade_out: 0.4
+  background:
+    color: "#1b1d22"
+  text:
+    font: [segoeui.ttf, "Segoe UI", DejaVuSans.ttf, Arial, Helvetica]
+    color: "#f2f2f2"
+    speed: 25
+    cursor:
+      style: bar

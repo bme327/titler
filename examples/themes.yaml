@@ -1,0 +1,29 @@
+# Project-specific themes, referenced from titles.yaml via `themes: themes.yaml`.
+# Relative paths (images, font files) are resolved relative to THIS file.
+
+skynet-hud:
+  extends: terminator
+  description: Terminator text over a dimmed background image with a HUD panel.
+  background:
+    image: assets/background.png
+    fit: cover
+    image_opacity: 0.35
+    image_blur: 2
+    overlays:
+      - type: rounded_rect
+        x: 6%
+        y: 14%
+        width: 88%
+        height: 72%
+        radius: 28
+        color: "#000000"
+        opacity: 0.65
+        outline: "#00ff41"
+        outline_width: 2pt
+      - type: circle
+        x: 88%
+        y: 22%
+        radius: 36
+        color: "#ff1a1a"
+        opacity: 0.85
+        blur: 6

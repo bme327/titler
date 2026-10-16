@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "titler"
+version = "0.1.0"
+description = "Render animated typewriter title slides to MP4 from a YAML file"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pillow>=10.1", "pyyaml>=6", "imageio-ffmpeg>=0.4.9"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+titler = "titler.cli:main"
+
+[tool.setuptools]
+packages = ["titler"]
+
+[tool.setuptools.package-data]
+titler = ["themes/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
